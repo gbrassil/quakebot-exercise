@@ -20,13 +20,13 @@ def main():
     t = Template(raw_template)
 
     kwargs = {
-        'title': 'Daily earthquake report',
+        'Quakebot': 'Daily earthquake report',
         #TODO: Experiment with different hard-coded values
         # to ensure your template logic works for all scenarios!
-        'num_large_quakes_yesterday': random.randint(5,10),
-        'large_quakes': large_quakes[0:5],
-        'large_quakes_count': len(large_quakes),
-        'num_quakes': len(data),
+        'yday_big_quakes': random.randint(5,10),
+        'big_quakes': large_quakes[0:5],
+        'big_quakes_count': len(large_quakes),
+        'quakes': len(data),
     }
     # Render the template
     compiled_text = t.render(**kwargs)
